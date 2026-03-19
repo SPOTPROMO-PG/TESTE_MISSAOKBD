@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>KBD - Aula</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body data-page="marcas" onload="renderKbd();">
+  <div class="bg-glow"></div>
+  <div class="app">
+    <div class="topbar">
+      <div class="topbar-left">
+        <button class="back" onclick="voltarMarca()" aria-label="Voltar" title="Voltar">←</button>
+        <div class="brand">
+          <div class="small">Aula / KBD</div>
+          <div class="title" id="kbdTitulo">—</div>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="topnav" aria-label="Navegação">
+          <a class="iconbtn" href="home.html" aria-label="Home" title="Home">🏠</a>
+          <a class="iconbtn active" href="home.html" aria-label="Marcas" title="Marcas">🏷️</a>
+          <a class="iconbtn" href="quiz.html" aria-label="Quiz" title="Quiz">🧠</a>
+        </div>
+
+        <div class="badge" id="topbarSetor">—</div>
+        <button class="iconbtn" type="button" onclick="trocarSetor()" aria-label="Trocar setor" title="Trocar setor">⚙️</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="kbdStatus" class="kbd-status pending">⏳ Pendente</div>
+
+      <div class="card" style="margin-top:12px">
+        <div class="card-title">Vídeo</div>
+        <div class="video-box">
+          <iframe id="videoFrame" style="display:none"></iframe>
+          <div id="videoPlaceholder" class="placeholder">Vídeo em breve</div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <div class="card-title">Execução (referência)</div>
+        <div id="imagensKbd" class="images"></div>
+      </div>
+
+      <div style="height:12px"></div>
+      <button class="btn" onclick="irParaQuiz()">Responder o Quiz</button>
+    </div>
+  </div>
+</body>
+</html>
