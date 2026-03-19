@@ -8,33 +8,11 @@
   <script defer src="quizzes.js"></script>
   <script defer src="app.js"></script>
 </head>
-<body data-page="quiz" onload="renderQuiz();">
-  <div class="bg-glow"></div>
-  <div class="app">
-    <div class="topbar">
-      <div class="topbar-left">
-        <button class="back" onclick="voltarMarca()" aria-label="Voltar" title="Voltar">←</button>
-        <div class="brand">
-          <div class="small" id="quizSubtitulo">—</div>
-          <div class="title" id="quizTitulo">Quiz</div>
-        </div>
-      </div>
-
-      <div class="topbar-right">
-        <div class="topnav" aria-label="Navegação">
-          <a class="iconbtn" href="home.html" aria-label="Home" title="Home">🏠</a>
-          <a class="iconbtn" href="home.html" aria-label="Marcas" title="Marcas">🏷️</a>
-          <a class="iconbtn active" href="quiz.html" aria-label="Quiz" title="Quiz">🧠</a>
-        </div>
-
-        <div class="badge" id="setorBadgeQuiz">—</div>
-        <button class="iconbtn" type="button" onclick="trocarSetor()" aria-label="Trocar setor" title="Trocar setor">⚙️</button>
-      </div>
-    </div>
-
-    <div class="container">
-      <div id="quizArea"></div>
-    </div>
+<body onload="renderQuiz()">
+  <div class="app-shell">
+    <header class="topbar"><div class="topbar-left" id="topbarLeft"></div><div class="topbar-right" id="topbarRight"></div></header>
+    <main class="page" id="homeApp"></main>
+    <nav class="bottom-nav" id="bottomNav"></nav>
   </div>
 </body>
 </html>

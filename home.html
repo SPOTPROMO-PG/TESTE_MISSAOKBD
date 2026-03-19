@@ -7,47 +7,11 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="app.js"></script>
 </head>
-<body data-page="home" onload="renderHome();">
-  <div class="bg-glow"></div>
-  <div class="app">
-
-    <div class="topbar">
-      <div class="topbar-left">
-        <img src="logo-missao-kbd-v2.png" alt="Missão KBD" class="app-logo-sm" onclick="location.reload()">
-        <div class="brand">
-          <div class="small">Missão KBD</div>
-          <div class="title">Marcas P&G</div>
-        </div>
-      </div>
-
-      <div class="topbar-right">
-        <div class="topnav" aria-label="Navegação">
-          <a class="iconbtn active" href="home.html" aria-label="Home" title="Home">🏠</a>
-          <a class="iconbtn" href="home.html" aria-label="Marcas" title="Marcas">🏷️</a>
-          <a class="iconbtn" href="quiz.html" aria-label="Quiz" title="Quiz">🧠</a>
-        </div>
-
-        <div class="badge" id="setorBadge">—</div>
-
-        <button class="iconbtn" type="button" onclick="trocarSetor()" aria-label="Trocar setor" title="Trocar setor">⚙️</button>
-        <button class="iconbtn" type="button" onclick="confirmarSaida()" aria-label="Sair" title="Sair">⎋</button>
-      </div>
-    </div>
-
-    <div class="container">
-      <!-- Logo / Hero menor -->
-      <div class="hero-logo">
-        <img src="logo-missao-kbd-v2.png" alt="Missão KBD">
-      </div>
-
-      <div class="section-head">
-        <h1>Marcas</h1>
-        <p class="small">Selecione uma marca para começar</p>
-      </div>
-
-      <div class="lista" id="listaMarcas"></div>
-    </div>
-
+<body onload="renderHome()">
+  <div class="app-shell">
+    <header class="topbar"><div class="topbar-left" id="topbarLeft"></div><div class="topbar-right" id="topbarRight"></div></header>
+    <main class="page" id="homeApp"></main>
+    <nav class="bottom-nav" id="bottomNav"></nav>
   </div>
 </body>
 </html>

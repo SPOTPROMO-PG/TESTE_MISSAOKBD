@@ -3,38 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Missão KBD - Marca</title>
+  <title>Marca - Missão KBD</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="app.js"></script>
 </head>
-<body data-page="marcas" onload="renderMarca();">
-  <div class="bg-glow"></div>
-  <div class="app">
-    <div class="topbar">
-      <div class="topbar-left">
-        <button class="back" onclick="voltarHome()" aria-label="Voltar" title="Voltar">←</button>
-        <div class="brand">
-          <div class="small">Marca</div>
-          <div class="title" id="marcaTitulo">—</div>
-        </div>
-      </div>
-
-      <div class="topbar-right">
-        <div class="topnav" aria-label="Navegação">
-          <a class="iconbtn" href="home.html" aria-label="Home" title="Home">🏠</a>
-          <a class="iconbtn active" href="home.html" aria-label="Marcas" title="Marcas">🏷️</a>
-          <a class="iconbtn" href="quiz.html" aria-label="Quiz" title="Quiz">🧠</a>
-        </div>
-
-        <div class="badge" id="setorBadge">—</div>
-        <button class="iconbtn" type="button" onclick="trocarSetor()" aria-label="Trocar setor" title="Trocar setor">⚙️</button>
-      </div>
-    </div>
-
-    <div class="container">
-      <div id="marcaProgresso" class="brand-progress">Progresso: —</div>
-      <div id="listaKbds" style="margin-top:12px"></div>
-    </div>
+<body onload="renderMarca()">
+  <div class="app-shell">
+    <header class="topbar"><div class="topbar-left" id="topbarLeft"></div><div class="topbar-right" id="topbarRight"></div></header>
+    <main class="page" id="homeApp"></main>
+    <nav class="bottom-nav" id="bottomNav"></nav>
   </div>
 </body>
 </html>

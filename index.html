@@ -3,31 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Missão KBD - Login</title>
+  <title>Missão KBD</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="app.js"></script>
 </head>
-<body data-page="login">
-  <div class="bg-glow"></div>
-  <div class="app">
-    <div class="container" style="padding-top:26px">
-      <div class="card" style="text-align:center">
-        <div style="font-weight:1000;font-size:22px">Missão KBD</div>
-        <div class="card-sub">Acesso de testes (mobile-first)</div>
-        <div style="height:14px"></div>
-
-        <div class="card" style="box-shadow:none;background:rgba(0,0,0,.25)">
-          <div class="card-title">Digite seu setor</div>
-          <div style="height:10px"></div>
-          <input id="setor" placeholder="Ex: SPI200" style="
-            width:100%;height:48px;border-radius:18px;
-            border:1px solid rgba(255,255,255,.10);
-            background:rgba(0,0,0,.35);color:#fff;
-            padding:0 14px;font-weight:800;outline:none;">
-          <div style="height:12px"></div>
-          <button class="btn" onclick="entrar()">Entrar</button>
-          <div style="height:10px"></div>
-          <div class="small muted">Setores liberados: SPI200, RS234, PR87, SC01</div>
+<body onload="renderLogin()">
+  <div class="login-page">
+    <div class="login-wrap">
+      <div class="login-stage">
+        <div class="login-hero">
+          <div class="rocket" id="loginRocket"></div>
+          <div class="topbar-title" style="font-size:30px">MISSÃO KBD</div>
+        </div>
+        <div class="login-card">
+          <div class="eyebrow">Login do setor</div>
+          <h1 class="hero-title" style="margin-top:14px">Acesse sua missão</h1>
+          <p class="hero-copy" style="margin-top:14px">Entre com o código do setor para abrir marcas, consultar KBDs e responder os quizzes do treinamento.</p>
+          <div style="margin-top:22px">
+            <div class="field-label">Código do setor</div>
+            <div class="input-wrap">
+              <input id="setor" type="text" placeholder="Ex: SPI200">
+            </div>
+          </div>
+          <div class="login-actions">
+            <button class="primary-btn pink" onclick="entrar()">Entrar</button>
+            <div class="linkish">setores liberados</div>
+            <div class="subtle" id="loginSectorList" style="text-align:center"></div>
+          </div>
         </div>
       </div>
     </div>
